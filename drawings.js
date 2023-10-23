@@ -1,19 +1,18 @@
 function drawPixels(pixelColors) {
-    for (let i = 0; i < arrY; i++) {
-      for (let j = 0; j < arrX; j++) {
-        switch (pixelColors[i][j]) {
-          case 0:
-            fill(colorWhite); //white
-            break;
-          case 1:
-            fill(colorBlack); //black
-            break;
-        }
-        noStroke();
-        rect(XPos + j * 20, YPos + i * 20, 20, 20);
-        console.log("making pixels");
+  for (let i = 0; i < arrY; i++) {
+    for (let j = 0; j < arrX; j++) {
+      switch (pixelColors[i][j]) {
+        case 0:
+          fill(colorWhite); //white
+          break;
+        case 1:
+          fill(colorBlack); //black
+          break;
       }
+      noStroke();
+      rect(XPos + j * 20, YPos + i * 20, size, size);
     }
+  }
 }
 
 function sadArt() {
@@ -40,7 +39,7 @@ function sadArt() {
     [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0],
   ];
 
-  drawPixels(sadColors)
+  drawPixels(sadColors);
 }
 
 function neutralArt() {
@@ -67,8 +66,7 @@ function neutralArt() {
     [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0],
   ];
 
-  drawPixels(neutralColors)
-
+  drawPixels(neutralColors);
 }
 
 function happyArt() {
@@ -87,15 +85,15 @@ function happyArt() {
     [1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1],
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    [1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1],
-    [1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1],
-    [0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0],
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+    [1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1],
+    [0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0],
     [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0],
     [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0],
     [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0],
   ];
 
-  drawPixels(happyColors)
+  drawPixels(happyColors);
 }
 
 function timerOnArt() {
