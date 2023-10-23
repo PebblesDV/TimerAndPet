@@ -6,21 +6,13 @@ let XPos = 50;
 let YPos = 115;
 let size = 10;
 
-let startButton;
 let colorWhite = (255, 255, 255);
 let colorBlack = (0, 0, 0);
 
 function setup() {
   createCanvas(canvasWidth, canvasHeight);
 
-  startButton = new Button("Start", 450, 200, 150, 50);
-  startButton.onClick = startButtonPressed;
-
   noLoop();
-}
-
-function startButtonPressed() {
-  console.log("button was pressed");
 }
 
 function draw() {
@@ -29,10 +21,7 @@ function draw() {
   fill(colorWhite);
   rect(XPos, YPos, 300, 340); //background for pet
 
-  line(400, 0, 400, 600); //seperates two halves of the screen
-
-  startButton.display();
-  
+  line(400, 0, 400, 600); //seperates two halves of the screen  
 
   // sadArt();
   // neutralArt();
